@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <POU Name="MotorControlProgram" Id="{00379d9c-0616-4665-8241-0c1fd684cd8f}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MotorControlProgram
+VAR
+	rtCM_Start: R_TRIG;
+	rtVM_Start: R_TRIG;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[(*
+VAR_INPUT
+	Run			:	BOOL;
+	Direction	:	BOOL;
+	ConstSpeed	:	BOOL;
+	Velocity	:	INT;
+END_VAR
+VAR_OUTPUT
+	isRunning	:	BOOL;
+	iActualVel	:	INT;
+END_VAR
+*)
+
+
+
+(* On / Off  Motor  *)
+
+//***
+rtCM_Start(CLK := GUI.CM_start);
+
+Hardware.Motor2_Start := rtCM_Start.Q ;
+
+
+(*  TAMU  Motor  *)
+//***
+rtVM_Start(CLK := GUI.VM_start);
+
+
+
+]]></ST>
+    </Implementation>
+    <LineIds Name="MotorControlProgram">
+      <LineId Id="5" Count="0" />
+      <LineId Id="7" Count="9" />
+      <LineId Id="6" Count="0" />
+      <LineId Id="37" Count="1" />
+      <LineId Id="27" Count="0" />
+      <LineId Id="26" Count="0" />
+      <LineId Id="25" Count="0" />
+      <LineId Id="22" Count="0" />
+      <LineId Id="18" Count="0" />
+      <LineId Id="23" Count="0" />
+      <LineId Id="19" Count="0" />
+      <LineId Id="24" Count="0" />
+      <LineId Id="28" Count="0" />
+      <LineId Id="20" Count="0" />
+      <LineId Id="30" Count="1" />
+      <LineId Id="36" Count="0" />
+      <LineId Id="34" Count="0" />
+      <LineId Id="29" Count="0" />
+      <LineId Id="17" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
