@@ -11,8 +11,8 @@ VAR_GLOBAL
 	Motor1_Start				AT %Q*   : BOOL; //  2
 	Motor1_Direction			AT %Q*   : BOOL; //  3
 	Motor1_Constant_speed		AT %Q*   : BOOL; //  4
-	Motor1_speed_value			AT %Q*   : BOOL; // Analog 1
-	Motor1_real_value			AT %I*   : BOOL; // Analog 1
+	Motor1_speed_value			AT %Q*   : INT; // Analog 1
+	Motor1_real_value			AT %I*   : INT; // Analog 1
 END_VAR
 
 ]]></Declaration>

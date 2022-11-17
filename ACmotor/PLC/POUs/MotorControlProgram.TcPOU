@@ -5,6 +5,10 @@
 VAR
 	rtCM_Start: R_TRIG;
 	rtVM_Start: R_TRIG;
+	rsCM	:	RS;
+	rsVM	:	RS;
+	
+	targSpeed	:	INT;
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -26,14 +30,27 @@ END_VAR
 (* On / Off  Motor  *)
 
 //***
-rtCM_Start(CLK := GUI.CM_start);
+rtCM_Start(CLK := GUI.bCMotor_Start);
+rsCM(SET := rtCM_Start.Q);
 
-Hardware.Motor2_Start := rtCM_Start.Q ;
+Hardware.Motor2_Start := rsCM.Q1 ;
 
 
 (*  TAMU  Motor  *)
 //***
-rtVM_Start(CLK := GUI.VM_start);
+//rsVM(SET := GUI.bVMotor_Start);
+//Hardware.Motor1_Start := rsVM.Q1 ;
+Hardware.Motor1_Start :=  GUI.bVMotor_Start;
+GUI.bVMotor_Running := Hardware.Motor1_Run_TAMU;
+Hardware.Motor1_Constant_speed := GUI.bVMotor_ConstantSpeed;
+
+// Y = x0 + %% * Xrng
+targSpeed := REAL_TO_INT( 32767 * (GUI.iVMotor_TargetSpeed / 100.0) );
+Hardware.Motor1_speed_value := targSpeed;
+
+GUI.iVMotor_CurrentSpeed := REAL_TO_INT( Hardware.Motor1_real_value / 32767.0 * 100.0 );
+
+
 
 
 
@@ -50,14 +67,23 @@ rtVM_Start(CLK := GUI.VM_start);
       <LineId Id="22" Count="0" />
       <LineId Id="18" Count="0" />
       <LineId Id="23" Count="0" />
+      <LineId Id="47" Count="0" />
       <LineId Id="19" Count="0" />
       <LineId Id="24" Count="0" />
       <LineId Id="28" Count="0" />
       <LineId Id="20" Count="0" />
-      <LineId Id="30" Count="1" />
+      <LineId Id="30" Count="0" />
+      <LineId Id="51" Count="0" />
+      <LineId Id="53" Count="1" />
       <LineId Id="36" Count="0" />
+      <LineId Id="52" Count="0" />
+      <LineId Id="58" Count="0" />
+      <LineId Id="56" Count="0" />
       <LineId Id="34" Count="0" />
       <LineId Id="29" Count="0" />
+      <LineId Id="60" Count="0" />
+      <LineId Id="59" Count="0" />
+      <LineId Id="61" Count="4" />
       <LineId Id="17" Count="0" />
     </LineIds>
   </POU>

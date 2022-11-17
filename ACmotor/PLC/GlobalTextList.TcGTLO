@@ -1,10 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
   <GlobalTextList Name="GlobalTextList" Id="{d3701ae3-cb50-46b7-a1bf-0d73ead5a863}">
     <XmlArchive>
       <Data>
         <o xml:space="preserve" t="GlobalTextListObject">
-          <l n="TextList" t="ArrayList" />
+          <l n="TextList" t="ArrayList" cet="TextListRow">
+            <o>
+              <v n="TextID">"67"</v>
+              <v n="TextDefault">"Constant speed"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"890"</v>
+              <v n="TextDefault">"Error"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"86"</v>
+              <v n="TextDefault">"Running"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+          </l>
           <l n="Languages" t="ArrayList" />
           <v n="GuidInit">{3a4bbf0d-e7c4-48db-89f1-3d5abb26ee20}</v>
           <v n="GuidReInit">{6576476a-13d1-4113-b2ae-02044f2ab71a}</v>
@@ -15,6 +31,8 @@
         <Type n="ArrayList">System.Collections.ArrayList</Type>
         <Type n="GlobalTextListObject">{63784cbb-9ba0-45e6-9d69-babf3f040511}</Type>
         <Type n="Guid">System.Guid</Type>
+        <Type n="String">System.String</Type>
+        <Type n="TextListRow">{53da1be7-ad25-47c3-b0e8-e26286dad2e0}</Type>
       </TypeList>
     </XmlArchive>
   </GlobalTextList>
