@@ -3,6 +3,19 @@
   <GVL Name="GUI" Id="{a09cb768-e531-45f1-996b-b97fedf59584}">
     <Declaration><![CDATA[{attribute 'qualified_only'}
 VAR_GLOBAL
+	//motors state
+	bCMotor_Start		:BOOL;
+	bVMotor_Start		:BOOL;
+	bCMotor_Running		:BOOL;
+	bVMotor_Running		:BOOL;
+	bCMotor_Error		:BOOL;
+	bVMotor_Error		:BOOL;
+	//Variable motor
+	iVMotor_CurrentSpeed	:INT;
+	iVMotor_TargetSpeed		:INT;
+	bVMotor_Direction		:BOOL; //directionof the motor, true left ---CHECK!!!!!
+	bVMotor_ConstantSpeed	:BOOL;
+		
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>
