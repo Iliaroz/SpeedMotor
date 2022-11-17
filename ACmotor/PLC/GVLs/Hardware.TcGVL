@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <GVL Name="Hardware" Id="{e86e1067-ca15-43e5-8cc0-23cd237b0d83}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	Motor2_CircuitBreaker		AT %I*   : BOOL; //  1
+	Motor2_Run_Contactor		AT %I*   : BOOL; //  2
+	Motor1_Run_TAMU				AT %I*   : BOOL; //  3
+	Motor2_Error_TAMU			AT %I*   : BOOL; //  4
+	Motor2_Start				AT %Q*   : BOOL; //  1
+	Motor1_Start				AT %Q*   : BOOL; //  2
+	Motor1_Direction			AT %Q*   : BOOL; //  3
+	Motor1_Constant_speed		AT %Q*   : BOOL; //  4
+	Motor1_speed_value			AT %Q*   : BOOL; // Analog 1
+	Motor1_real_value			AT %I*   : BOOL; // Analog 1
+END_VAR
+
+]]></Declaration>
+  </GVL>
+</TcPlcObject>
