@@ -15,7 +15,7 @@ VAR_GLOBAL
 	iVMotor_TargetSpeed		:INT;
 	bVMotor_Direction		:BOOL; //directionof the motor, true left ---CHECK!!!!!
 	bVMotor_ConstantSpeed	:BOOL;
-		
+
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>
