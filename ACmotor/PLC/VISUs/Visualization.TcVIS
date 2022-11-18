@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
   <Visu Name="Visualization" Id="{23d656f0-eefa-4ebb-a3bc-71bc88c23df3}">
     <XmlArchive>
       <Data>
@@ -281,6 +281,10 @@
                     <o>
                       <v n="Id">2597686782L</v>
                       <v n="Value">false</v>
+                    </o>
+                    <o>
+                      <v n="Id">743958181L</v>
+                      <v n="Value">"GUI.bVMotor_Error"</v>
                     </o>
                   </l>
                 </o>
@@ -1125,10 +1129,10 @@
               <d n="FbMethods" t="CaseInsensitiveHashtable" ckt="String" cvt="Guid">
                 <v>FB_Init</v>
                 <v>44d4bf9a-d82b-478c-89df-927c3f17ac41</v>
-                <v>FB_Exit</v>
-                <v>857b76e3-1c0f-43c8-8c26-6aab264a422f</v>
                 <v>FB_Reinit</v>
                 <v>24294689-0bd0-4b37-8d98-09cff5543c1e</v>
+                <v>FB_Exit</v>
+                <v>857b76e3-1c0f-43c8-8c26-6aab264a422f</v>
               </d>
               <v n="FbName">"NotImportant"</v>
               <v n="FbGuid">{1f667885-a87c-4cf1-8164-71093e670afe}</v>
