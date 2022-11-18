@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
   <POU Name="MotorControlProgram" Id="{00379d9c-0616-4665-8241-0c1fd684cd8f}" SpecialFunc="None">
     <Declaration><![CDATA[PROGRAM MotorControlProgram
 VAR
@@ -43,7 +43,7 @@ Hardware.Motor2_Start := rsCM.Q1 ;
 Hardware.Motor1_Start :=  GUI.bVMotor_Start;
 GUI.bVMotor_Running := Hardware.Motor1_Run_TAMU;
 Hardware.Motor1_Constant_speed := GUI.bVMotor_ConstantSpeed;
-
+Hardware.Motor1_Direction := GUI.bVMotor_Direction;
 // Y = x0 + %% * Xrng
 targSpeed := REAL_TO_INT( 32767 * (GUI.iVMotor_TargetSpeed / 100.0) );
 Hardware.Motor1_speed_value := targSpeed;

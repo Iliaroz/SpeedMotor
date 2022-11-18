@@ -1,13 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.9">
   <GlobalTextList Name="GlobalTextList" Id="{d3701ae3-cb50-46b7-a1bf-0d73ead5a863}">
     <XmlArchive>
       <Data>
         <o xml:space="preserve" t="GlobalTextListObject">
           <l n="TextList" t="ArrayList" cet="TextListRow">
             <o>
+              <v n="TextID">"889"</v>
+              <v n="TextDefault">"Constant Motor"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
               <v n="TextID">"67"</v>
               <v n="TextDefault">"Constant speed"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"671"</v>
+              <v n="TextDefault">"Direction"</v>
               <l n="LanguageTexts" t="ArrayList" />
             </o>
             <o>
@@ -18,6 +28,11 @@
             <o>
               <v n="TextID">"86"</v>
               <v n="TextDefault">"Running"</v>
+              <l n="LanguageTexts" t="ArrayList" />
+            </o>
+            <o>
+              <v n="TextID">"279"</v>
+              <v n="TextDefault">"Variable Motor"</v>
               <l n="LanguageTexts" t="ArrayList" />
             </o>
           </l>
