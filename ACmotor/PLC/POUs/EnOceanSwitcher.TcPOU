@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <POU Name="EnOceanSwitcher" Id="{a0e4f2cf-8dbb-4098-9365-f32c54cbe2e4}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM EnOceanSwitcher
+VAR
+	ftReceived: F_TRIG;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[ftReceived(CLK:= EnOcean.bSwitchDataReceived, Q => received );
+ftBtnBlue(CLK := GVL.btnBlue);
+]]></ST>
+    </Implementation>
+    <LineIds Name="EnOceanSwitcher">
+      <LineId Id="9" Count="1" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <Task Name="EnOceanCommunication" Id="{14d5701e-4e34-4d45-9095-b61f22cc939c}">
+    <!--CycleTime in micro seconds.-->
+    <CycleTime>5000</CycleTime>
+    <Priority>1</Priority>
+    <PouCall>
+      <Name>EnOceanCom</Name>
+    </PouCall>
+    <TaskFBGuid>{cef020df-b228-4883-802f-e36fe707b739}</TaskFBGuid>
+    <Fb_init>{cf9b880e-4cd9-4f17-b5be-12b95356981a}</Fb_init>
+    <Fb_exit>{49233ce3-0fb7-4bcb-9904-00834e352ebd}</Fb_exit>
+    <CycleUpdate>{a3a4e511-2622-4c81-83b0-5058666dd008}</CycleUpdate>
+    <PostCycleUpdate>{05f6ca06-be1b-4f58-9f31-c3122becfa94}</PostCycleUpdate>
+  </Task>
+</TcPlcObject>

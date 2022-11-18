@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <GVL Name="EnOcean" Id="{255b2c92-c935-4188-bd31-ba4c58c08657}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	bInit: BOOL;
+	nIndex: USINT;
+	stIn  AT %I* : KL6581_Input;
+	stOut AT %Q* : KL6581_Output;
+	bComBusy: BOOL;
+	bComError: BOOL;
+	iCommErrorID: E_KL6581_Err;
+	stBuffer: STR_KL6581;
+	bComReady: BOOL;
+	bStartSearch: BOOL;
+	bSearchReceived: BOOL;
+	iFoundDevice: INT;
+	arrFoundIDs: ARRAY [0..255] OF DWORD;
+	// switch
+	stSwitchData: STR_EnOceanSwitch;
+	bSwitchDataReceived: BOOL;
+	dwSwitchID	:	DWORD := 16#FEFA6D21; 
+	// sensor
+	stThermoData: ARRAY [0..3] OF BYTE; // ST_EEP_A5_09_04;
+	bThermoDataReceived: BOOL;
+	dwThermoID	:	DWORD := 16#018DC339;
+	
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

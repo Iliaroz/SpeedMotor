@@ -17,8 +17,15 @@
     <LibraryReferences>{41b50adb-c183-4581-b8bb-ae5b4f421299}</LibraryReferences>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="EnOceanCommunication.TcTTO">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="GlobalTextList.TcGTLO">
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GVLs\EnOcean.TcGVL">
+      <SubType>Code</SubType>
+      <LinkAlways>true</LinkAlways>
     </Compile>
     <Compile Include="GVLs\GUI.TcGVL">
       <SubType>Code</SubType>
@@ -31,10 +38,19 @@
     <Compile Include="PlcTask.TcTTO">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="POUs\EnOceanCom.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\EnOceanSwitcher.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="POUs\MAIN.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="POUs\MotorControlProgram.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\ReceiveSwitch.TcPOU">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Visualization Manager.TcVMO">
@@ -93,6 +109,10 @@
       <Namespace>VisuNativeControl</Namespace>
       <SystemLibrary>true</SystemLibrary>
       <ResolverGuid>2717eb6a-dd07-4c66-8d8d-cacebd7b18ae</ResolverGuid>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc2_EnOcean">
+      <DefaultResolution>Tc2_EnOcean, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc2_EnOcean</Namespace>
     </PlaceholderReference>
     <PlaceholderReference Include="Tc2_Standard">
       <DefaultResolution>Tc2_Standard, * (Beckhoff Automation GmbH)</DefaultResolution>

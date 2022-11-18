@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <POU Name="ReceiveSwitch" Id="{4437d9f6-ff2a-4f6c-8be8-1a136922cd63}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM ReceiveSwitch
+VAR
+	fbReceiveSwitchMessage: FB_Rec_RPS_Switch;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fbReceiveSwitchMessage(
+	str_KL6581:= EnOcean.stBuffer, 
+	byNode:= 0, 
+	dw_ID:= EnOcean.dwSwitchID, 
+	str_EnOceanSwitch=> EnOcean.stSwitchData, 
+	by_Node=> , 
+	bReceive=> EnOcean.bSwitchDataReceived);
+
+]]></ST>
+    </Implementation>
+    <LineIds Name="ReceiveSwitch">
+      <LineId Id="6" Count="5" />
+      <LineId Id="5" Count="0" />
+      <LineId Id="17" Count="0" />
+      <LineId Id="13" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
